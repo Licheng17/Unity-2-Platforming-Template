@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -137,6 +137,7 @@ public class PlayerManagerScript : MonoBehaviour
         item.transform.parent = null;
         currentSelection = inventory.Count - 1;
         item.gameObject.SetActive(false);
+        DontDestroyOnLoad(item.gameObject);
     }
  
     private void InventoryRemove()
